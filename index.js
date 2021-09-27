@@ -1,7 +1,7 @@
 // Unplash API
 const count = 10;
-const apiKey = 'KEY';
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+const apiKey = 'N6GI-vtS-1oIfxYrRYDmqNZplk8uZvlUA972fr2wc4Y';
+const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${config.apiKey}&count=${count}`;
 
 // Get photos from Unplash API
 async function getPhotos() {
