@@ -3,11 +3,18 @@ const loader = document.getElementById('loader');
 
 let photosArray = [];
 
-// Unplash API
+// Unplash API url
 const count = 10;
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${config.apiKey}&count=${count}`;
 
-// Create elemnts to disply photos, add them to DOM
+// Helper function to set attributes to DOM elements
+function setAttributes(element, attributes) {
+  for (const key in attributes) {
+    element.setAttribute(key, attributes[key]);
+  }
+}
+
+// Create elements to disply photos, add them to DOM
 function displayPhotos() {
   // Loop photosArray
   photosArray.forEach((photo) => {
