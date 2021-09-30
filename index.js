@@ -11,7 +11,18 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${config.apiKe
 function displayPhotos() {
   // Loop photosArray
   photosArray.forEach((photo) => {
-    console.log(photo);
+    // Create anchor link to Unplash website
+    const anchor = document.createElement('a');
+    anchor.setAttribute('href', photo.links.html);
+    anchor.setAttribute('target', '_blank');
+    // Create image element
+    const image = document.createElement('img');
+    image.setAttribute('src', photo.urls.regular);
+    image.setAttribute('alt', photo.alt_description);
+    image.setAttribute('title', photo.alt_description);
+    // Add image into anchor and them add them to image container
+    anchor.appendChild(image);
+    imageContainer.appendChild(anchor);
   });
 }
 
